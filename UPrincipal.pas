@@ -1,0 +1,59 @@
+unit UPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, Vcl.ComCtrls;
+
+type
+  TfrmPrincipal = class(TForm)
+    lblCadastros: TLabel;
+    imgUsuarios: TImage;
+    imgReceber: TImage;
+    imgPagar: TImage;
+    imgCaixa: TImage;
+    imgConReceber: TImage;
+    imgConPagar: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
+    imgRelPagar: TImage;
+    imgConfig: TImage;
+    imgNavegador: TImage;
+    imgRelReceber: TImage;
+    imgRelCaixa: TImage;
+    blnhn1: TBalloonHint;
+    stat1: TStatusBar;
+    tmr1: TTimer;
+    procedure tmr1Timer(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  if Application.MessageBox('Deseja realmente sair?', 'Informação', MB_YesNo+MB_ICONQUESTION) = mrYes then
+    Application.Terminate
+  else
+  begin
+  Abort;
+  end
+end;
+
+procedure TfrmPrincipal.tmr1Timer(Sender: TObject);
+begin
+  stat1.Panels.Items[0].Text := DateTimeToStr(now);
+end;
+
+end.
