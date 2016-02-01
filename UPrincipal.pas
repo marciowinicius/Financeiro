@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ComCtrls;
+  Vcl.Imaging.pngimage, Vcl.ComCtrls, Vcl.Buttons;
 
 type
   TfrmPrincipal = class(TForm)
@@ -26,8 +26,10 @@ type
     blnhn1: TBalloonHint;
     stat1: TStatusBar;
     tmr1: TTimer;
+    BitBtn1: TBitBtn;
     procedure tmr1Timer(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,6 +42,19 @@ var
 implementation
 
 {$R *.dfm}
+
+uses ufrmCadastroBasico;
+
+procedure TfrmPrincipal.BitBtn1Click(Sender: TObject);
+begin
+  frmCadastroBasico := TfrmCadastroBasico.Create(nil);
+  try
+    frmCadastroBasico.ShowModal;
+
+  finally
+    FreeAndNil(frmCadastroBasico);
+  end
+end;
 
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -55,5 +70,4 @@ procedure TfrmPrincipal.tmr1Timer(Sender: TObject);
 begin
   stat1.Panels.Items[0].Text := DateTimeToStr(now);
 end;
-
 end.

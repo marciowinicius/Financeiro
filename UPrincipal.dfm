@@ -2669,9 +2669,15 @@ object frmPrincipal: TfrmPrincipal
       item
         Width = 50
       end>
-    ExplicitLeft = 336
-    ExplicitTop = 224
-    ExplicitWidth = 0
+  end
+  object BitBtn1: TBitBtn
+    Left = 494
+    Top = 208
+    Width = 75
+    Height = 25
+    Caption = 'BitBtn1'
+    TabOrder = 1
+    OnClick = BitBtn1Click
   end
   object blnhn1: TBalloonHint
     Left = 592

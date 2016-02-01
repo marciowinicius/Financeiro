@@ -4,7 +4,9 @@ uses
   Vcl.Forms,
   UPrincipal in 'UPrincipal.pas' {frmPrincipal},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  ModConexao in 'ModConexao.pas' {DataModule1: TDataModule},
+  ufrmCadastroBasico in 'ufrmCadastroBasico.pas' {frmCadastroBasico};
 
 {$R *.res}
 
@@ -13,5 +15,6 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Glow');
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.
