@@ -3,7 +3,7 @@ object frmCadastroBasico: TfrmCadastroBasico
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'Cadastro'
-  ClientHeight = 349
+  ClientHeight = 397
   ClientWidth = 677
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -20,22 +20,20 @@ object frmCadastroBasico: TfrmCadastroBasico
   TextHeight = 13
   object stat1: TStatusBar
     Left = 0
-    Top = 330
+    Top = 378
     Width = 677
     Height = 19
     Panels = <>
-    ExplicitTop = 311
-    ExplicitWidth = 604
+    ExplicitTop = 330
   end
   object pnl1: TPanel
     Left = 0
-    Top = 289
+    Top = 337
     Width = 677
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 270
-    ExplicitWidth = 604
+    ExplicitTop = 289
     object acttb1: TActionToolBar
       Left = 1
       Top = 1
@@ -55,61 +53,55 @@ object frmCadastroBasico: TfrmCadastroBasico
       Font.Style = []
       ParentFont = False
       Spacing = 0
-      ExplicitWidth = 677
-      ExplicitHeight = 86
     end
   end
   object pgcCadastro: TPageControl
     Left = 0
     Top = 0
     Width = 677
-    Height = 289
+    Height = 138
     ActivePage = tbsPesquisa
     Align = alClient
     TabOrder = 2
-    ExplicitWidth = 604
-    ExplicitHeight = 270
+    ExplicitHeight = 289
     object tbsCadastro: TTabSheet
       Caption = 'Cadastro'
-      ExplicitWidth = 596
-      ExplicitHeight = 242
+      ExplicitHeight = 261
     end
     object tbsPesquisa: TTabSheet
       Caption = 'Pesquisa'
       ImageIndex = 1
       OnShow = tbsPesquisaShow
-      ExplicitWidth = 596
-      ExplicitHeight = 242
-      object dbgrd1: TDBGrid
-        Left = 0
-        Top = 83
-        Width = 669
-        Height = 178
-        Align = alBottom
-        DataSource = dsTabela
-        DrawingStyle = gdsGradient
-        TabOrder = 0
-        TitleFont.Charset = DEFAULT_CHARSET
-        TitleFont.Color = clWindowText
-        TitleFont.Height = -11
-        TitleFont.Name = 'Tahoma'
-        TitleFont.Style = []
-      end
+      ExplicitHeight = 261
     end
+  end
+  object dbgrd1: TDBGrid
+    Left = 0
+    Top = 138
+    Width = 677
+    Height = 199
+    Align = alBottom
+    DataSource = dsTabela
+    DrawingStyle = gdsGradient
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
   end
   object dsTabela: TDataSource
     DataSet = DataModule1.cdsCaixa
-    Enabled = False
     Left = 552
     Top = 64
   end
   object ilCadastro: TImageList
     Height = 32
     Width = 32
-    Left = 404
-    Top = 192
+    Left = 428
+    Top = 152
     Bitmap = {
-      494C010112001800100020002000FFFFFFFFFF00FFFFFFFFFFFFFFFF424D3600
+      494C010112001800140020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A000000001002000000000000040
       010000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
@@ -2753,7 +2745,8 @@ object frmCadastroBasico: TfrmCadastroBasico
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
-      00000000000000000000000000000000}
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000}
   end
   object actmgrCadastro: TActionManager
     ActionBars = <
@@ -2816,14 +2809,15 @@ object frmCadastroBasico: TfrmCadastroBasico
         ActionBar = acttb1
       end>
     Images = ilCadastro
-    Left = 404
-    Top = 144
+    Left = 428
+    Top = 96
     StyleName = 'Platform Default'
     object actInserir: TAction
       Caption = 'Inserir'
       ImageIndex = 4
       ShortCut = 114
       OnExecute = actInserirExecute
+      OnUpdate = actInserirUpdate
     end
     object actEditar: TAction
       Caption = 'Editar'
@@ -2845,6 +2839,7 @@ object frmCadastroBasico: TfrmCadastroBasico
       ImageIndex = 15
       ShortCut = 117
       OnExecute = actSalvarExecute
+      OnUpdate = actSalvarUpdate
     end
     object actCancelar: TAction
       Caption = 'Cancelar'

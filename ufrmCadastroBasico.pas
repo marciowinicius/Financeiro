@@ -41,6 +41,8 @@ type
     procedure actCancelarUpdate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure tbsPesquisaShow(Sender: TObject);
+    procedure actInserirUpdate(Sender: TObject);
+    procedure actSalvarUpdate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -59,12 +61,15 @@ uses ModConexao;
 
 procedure TfrmCadastroBasico.actCancelarExecute(Sender: TObject);
 begin
-  TClientDataSet(dsTabela).Cancel;
+  TClientDataSet(dsTabela.DataSet).Cancel;
+  if pgcCadastro.ActivePage = tbsCadastro then
+    pgcCadastro.ActivePage := tbsPesquisa;
+
 end;
 
 procedure TfrmCadastroBasico.actCancelarUpdate(Sender: TObject);
 begin
-  TAction(actCancelar).Enabled := TAction(actSalvar).Enabled = True;
+  actCancelar.Enabled := actSalvar.Enabled = True;
 end;
 
 procedure TfrmCadastroBasico.actEditarExecute(Sender: TObject);
@@ -89,7 +94,15 @@ end;
 
 procedure TfrmCadastroBasico.actInserirExecute(Sender: TObject);
 begin
-  //
+  if pgcCadastro.ActivePage = tbsPesquisa then
+    pgcCadastro.ActivePage := tbsCadastro;
+    TClientDataSet(dsTabela.DataSet).Open;
+    TClientDataSet(dsTabela.DataSet).Insert;
+end;
+
+procedure TfrmCadastroBasico.actInserirUpdate(Sender: TObject);
+begin
+  actInserir.Enabled := dsTabela.State in [dsBrowse,dsInactive];
 end;
 
 procedure TfrmCadastroBasico.actPesquisarExecute(Sender: TObject);
@@ -101,6 +114,11 @@ end;
 procedure TfrmCadastroBasico.actSalvarExecute(Sender: TObject);
 begin
   //
+end;
+
+procedure TfrmCadastroBasico.actSalvarUpdate(Sender: TObject);
+begin
+  actSalvar.Enabled := dsTabela.State in [dsInsert,dsEdit];
 end;
 
 procedure TfrmCadastroBasico.FormClose(Sender: TObject;
