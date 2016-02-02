@@ -1,15 +1,2 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject>
-	<Transactions>
-    <Transaction>2016/01/29 16:03:33.000.182,=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.pas</Transaction>
-    <Transaction>2016/01/29 16:04:23.000.425,C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\ModConexao.pas=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.pas</Transaction>
-    <Transaction>2016/01/29 16:04:23.000.425,C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\ModConexao.dfm=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.dfm</Transaction>
-    <Transaction>2016/02/01 13:50:19.000.154,=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.pas</Transaction>
-    <Transaction>2016/02/01 13:50:43.000.152,C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\view\ufrmCadastroBasico.pas=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.pas</Transaction>
-    <Transaction>2016/02/01 13:50:43.000.152,C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\view\ufrmCadastroBasico.dfm=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.dfm</Transaction>
-    <Transaction>2016/02/01 14:46:22.000.812,C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\view\ufrmCadastroBasico.pas=</Transaction>
-    <Transaction>2016/02/01 14:47:10.000.180,=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.pas</Transaction>
-    <Transaction>2016/02/01 14:47:43.000.812,C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.pas=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\ufrmCadastroBasico.pas</Transaction>
-    <Transaction>2016/02/01 14:47:43.000.812,C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.dfm=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\ufrmCadastroBasico.dfm</Transaction>
-  </Transactions>
-</BorlandProject>
+<BorlandProject/>
