@@ -43,6 +43,9 @@ type
     procedure tbsPesquisaShow(Sender: TObject);
     procedure actInserirUpdate(Sender: TObject);
     procedure actSalvarUpdate(Sender: TObject);
+    procedure actEditarUpdate(Sender: TObject);
+    procedure actExcluirUpdate(Sender: TObject);
+    procedure actImprimirUpdate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -77,9 +80,23 @@ begin
   //
 end;
 
+procedure TfrmCadastroBasico.actEditarUpdate(Sender: TObject);
+begin
+  if (dsTabela.State in [dsBrowse]) and (not TClientDataSet(dsTabela.DataSet).IsEmpty) then
+
+  actEditar.Enabled := dsTabela.State in [dsBrowse];
+end;
+
 procedure TfrmCadastroBasico.actExcluirExecute(Sender: TObject);
 begin
   //
+end;
+
+procedure TfrmCadastroBasico.actExcluirUpdate(Sender: TObject);
+begin
+  if (dsTabela.State in [dsBrowse]) and (not TClientDataSet(dsTabela.DataSet).IsEmpty) then
+
+  actExcluir.Enabled := dsTabela.State in [dsBrowse];
 end;
 
 procedure TfrmCadastroBasico.actFecharExecute(Sender: TObject);
@@ -90,6 +107,13 @@ end;
 procedure TfrmCadastroBasico.actImprimirExecute(Sender: TObject);
 begin
   //
+end;
+
+procedure TfrmCadastroBasico.actImprimirUpdate(Sender: TObject);
+begin
+  if (dsTabela.State in [dsBrowse]) and (not TClientDataSet(dsTabela.DataSet).IsEmpty) then
+
+  actImprimir.Enabled := dsTabela.State in [dsBrowse];
 end;
 
 procedure TfrmCadastroBasico.actInserirExecute(Sender: TObject);

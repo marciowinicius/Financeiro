@@ -24,7 +24,6 @@ object frmCadastroBasico: TfrmCadastroBasico
     Width = 677
     Height = 19
     Panels = <>
-    ExplicitTop = 330
   end
   object pnl1: TPanel
     Left = 0
@@ -33,7 +32,6 @@ object frmCadastroBasico: TfrmCadastroBasico
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 289
     object acttb1: TActionToolBar
       Left = 1
       Top = 1
@@ -63,16 +61,13 @@ object frmCadastroBasico: TfrmCadastroBasico
     ActivePage = tbsPesquisa
     Align = alClient
     TabOrder = 2
-    ExplicitHeight = 289
     object tbsCadastro: TTabSheet
       Caption = 'Cadastro'
-      ExplicitHeight = 261
     end
     object tbsPesquisa: TTabSheet
       Caption = 'Pesquisa'
       ImageIndex = 1
       OnShow = tbsPesquisaShow
-      ExplicitHeight = 261
     end
   end
   object dbgrd1: TDBGrid
@@ -101,7 +96,7 @@ object frmCadastroBasico: TfrmCadastroBasico
     Left = 428
     Top = 152
     Bitmap = {
-      494C010112001800140020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010112001800180020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A000000001002000000000000040
       010000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
@@ -2825,6 +2820,7 @@ object frmCadastroBasico: TfrmCadastroBasico
       ImageIndex = 9
       ShortCut = 115
       OnExecute = actEditarExecute
+      OnUpdate = actEditarUpdate
     end
     object actExcluir: TAction
       Caption = 'Excluir'
@@ -2832,6 +2828,7 @@ object frmCadastroBasico: TfrmCadastroBasico
       ImageIndex = 7
       ShortCut = 116
       OnExecute = actExcluirExecute
+      OnUpdate = actExcluirUpdate
     end
     object actSalvar: TAction
       Caption = 'Salvar'
@@ -2861,6 +2858,7 @@ object frmCadastroBasico: TfrmCadastroBasico
       ImageIndex = 12
       ShortCut = 120
       OnExecute = actImprimirExecute
+      OnUpdate = actImprimirUpdate
     end
     object actFechar: TAction
       Caption = 'Fechar'
