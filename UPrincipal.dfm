@@ -13,7 +13,6 @@ object frmPrincipal: TfrmPrincipal
   Font.Style = []
   KeyPreview = True
   OldCreateOrder = False
-  Position = poDesktopCenter
   OnClose = FormClose
   PixelsPerInch = 96
   TextHeight = 13

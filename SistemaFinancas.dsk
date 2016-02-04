@@ -16,7 +16,7 @@ EditWindowCount=1
 [C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\ufrmCadastroBasico.pas]
 ModuleType=TSourceModule
 FormState=1
-FormOnTop=0
+FormOnTop=1
 
 [C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\ModConexao.pas]
 ModuleType=TSourceModule
@@ -91,7 +91,7 @@ TopLine=133
 LeftCol=1
 Elisions=
 Bookmarks=
-EditViewName=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\ufrmCadastroBasico.pas
+EditViewName=Borland.FormDesignerView
 
 [View3]
 CustomEditViewType=TEditView
@@ -245,6 +245,11 @@ LRDockWidth=1896
 Dockable=1
 StayOnTop=0
 SplitPos=111
+
+[PropInspDesignerSelection]
+ArrangeBy=Name
+SelectedItem=Action,
+ExpandedItems=Action=0,Anchors=0,Constraints=0
 
 [ModelViewTool]
 PercentageSizes=1
