@@ -5,8 +5,10 @@ uses
   UPrincipal in 'UPrincipal.pas' {frmPrincipal},
   Vcl.Themes,
   Vcl.Styles,
-  ModConexao in 'ModConexao.pas' {DataModule1: TDataModule},
-  ufrmCadastroBasico in 'ufrmCadastroBasico.pas' {frmCadastroBasico};
+  ModConexao in 'ModConexao.pas' {dmDados: TDataModule},
+  ufrmCadastroBasico in 'ufrmCadastroBasico.pas' {frmCadastroBasico},
+  ufrmCadastroUsuarios in 'view\ufrmCadastroUsuarios.pas' {frmCadastroUsuarios},
+  UFuncoes in 'classes\UFuncoes.pas';
 
 {$R *.res}
 
@@ -15,6 +17,6 @@ begin
   Application.MainFormOnTaskbar := True;
   TStyleManager.TrySetStyle('Luna');
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
-  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TdmDados, dmDados);
   Application.Run;
 end.

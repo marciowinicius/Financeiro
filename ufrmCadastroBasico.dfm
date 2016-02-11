@@ -32,8 +32,8 @@ object frmCadastroBasico: TfrmCadastroBasico
     Align = alBottom
     TabOrder = 1
     object btnInserir: TSpeedButton
-      Left = 7
-      Top = 4
+      Left = 4
+      Top = 6
       Width = 66
       Height = 41
       Action = acInserir
@@ -117,8 +117,7 @@ object frmCadastroBasico: TfrmCadastroBasico
     end
     object tbsPesquisa: TTabSheet
       Caption = 'Pesquisa'
-      ImageIndex = 1
-      OnShow = tbsPesquisaShow
+      ImageIndex = 2
       object Label1: TLabel
         Left = 16
         Top = 16
@@ -132,38 +131,37 @@ object frmCadastroBasico: TfrmCadastroBasico
         Font.Style = []
         ParentFont = False
       end
-      object edtPesquisar: TEdit
-        Left = 16
-        Top = 36
-        Width = 225
-        Height = 21
-        TabOrder = 0
-      end
       object btnFiltrar: TButton
         Left = 243
         Top = 34
         Width = 75
         Height = 25
         Caption = 'Filtrar'
+        TabOrder = 0
+      end
+      object dbgDados: TDBGrid
+        Left = 0
+        Top = 65
+        Width = 652
+        Height = 211
+        Align = alBottom
+        DataSource = dsTabela
+        DrawingStyle = gdsGradient
         TabOrder = 1
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+      end
+      object edtPesquisar: TEdit
+        Left = 16
+        Top = 36
+        Width = 225
+        Height = 21
+        TabOrder = 2
       end
     end
-  end
-  object dbgDados: TDBGrid
-    Left = 0
-    Top = 89
-    Width = 677
-    Height = 216
-    Align = alCustom
-    DataSource = dsTabela
-    DrawingStyle = gdsGradient
-    Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
-    TabOrder = 3
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
   end
   object dsTabela: TDataSource
     DataSet = DataModule1.cdsCaixa
@@ -176,7 +174,7 @@ object frmCadastroBasico: TfrmCadastroBasico
     Left = 428
     Top = 152
     Bitmap = {
-      494C010113001800240020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010113001800280020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       000000000000360000002800000080000000A000000001002000000000000040
       010000000000000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
       FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF

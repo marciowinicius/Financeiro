@@ -16,8 +16,6 @@ type
     pnl1: TPanel;
     pgcCadastro: TPageControl;
     tbsCadastro: TTabSheet;
-    tbsPesquisa: TTabSheet;
-    dbgDados: TDBGrid;
     ilCadastro: TImageList;
     Label1: TLabel;
     edtPesquisar: TEdit;
@@ -39,9 +37,11 @@ type
     btnPesquisar: TSpeedButton;
     btnImprimir: TSpeedButton;
     btnFechar: TSpeedButton;
+    dbgDados: TDBGrid;
+    tbsPesquisa: TTabSheet;
     procedure FormKeyPress(Sender: TObject; var key: Char);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure tbsPesquisaShow(Sender: TObject);
+    procedure tbsPesquisarShow(Sender: TObject);
     procedure acFecharExecute(Sender: TObject);
     procedure acInserirExecute(Sender: TObject);
     procedure acEditarExecute(Sender: TObject);
@@ -217,7 +217,7 @@ begin
 
 end;
 
-procedure TfrmCadastroBasico.tbsPesquisaShow(Sender: TObject);
+procedure TfrmCadastroBasico.tbsPesquisarShow(Sender: TObject);
 begin
   pgcCadastro.ActivePage := tbsPesquisa;
 end;

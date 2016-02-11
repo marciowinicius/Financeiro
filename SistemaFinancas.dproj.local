@@ -1,2 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2016/02/05 15:54:13.469,=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.pas</Transaction>
+    <Transaction>2016/02/05 15:55:15.396,C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\view\ufrmCadastroUsuarios.dfm=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.dfm</Transaction>
+    <Transaction>2016/02/05 15:55:15.396,C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\view\ufrmCadastroUsuarios.pas=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.pas</Transaction>
+    <Transaction>2016/02/05 16:50:10.480,=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.pas</Transaction>
+    <Transaction>2016/02/05 16:50:30.471,C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\classes\UFuncoes.pas=C:\Users\Márcio\Documents\Delphi\Sistema Financeiro\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

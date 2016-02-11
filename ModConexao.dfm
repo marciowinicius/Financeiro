@@ -1,4 +1,4 @@
-object DataModule1: TDataModule1
+object dmDados: TdmDados
   OldCreateOrder = False
   Height = 340
   Width = 447
@@ -38,6 +38,7 @@ object DataModule1: TDataModule1
       'Encrypted=False'
       'BlobSize=-1'
       'ErrorResourceFile=')
+    Connected = True
     Left = 32
     Top = 16
   end
@@ -254,22 +255,23 @@ object DataModule1: TDataModule1
     Top = 248
   end
   object cdsUsuarios: TClientDataSet
+    Active = True
     Aggregates = <>
     Params = <>
     ProviderName = 'dspUsuarios'
     Left = 184
     Top = 248
     object cdsUsuariosid: TIntegerField
-      FieldName = 'id'
+      FieldName = 'ID'
       Required = True
     end
     object cdsUsuariosnome: TStringField
-      FieldName = 'nome'
+      FieldName = 'Nome'
       Required = True
       Size = 50
     end
     object cdsUsuarioslogin: TStringField
-      FieldName = 'login'
+      FieldName = 'Login'
       Required = True
     end
     object cdsUsuariossenha: TStringField

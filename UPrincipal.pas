@@ -30,6 +30,7 @@ type
     procedure tmr1Timer(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BitBtn1Click(Sender: TObject);
+    procedure imgUsuariosClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,7 +44,7 @@ implementation
 
 {$R *.dfm}
 
-uses ufrmCadastroBasico;
+uses ufrmCadastroBasico, ufrmCadastroUsuarios;
 
 procedure TfrmPrincipal.BitBtn1Click(Sender: TObject);
 begin
@@ -63,6 +64,17 @@ begin
   else
   begin
   Abort;
+  end
+end;
+
+procedure TfrmPrincipal.imgUsuariosClick(Sender: TObject);
+begin
+  frmCadastroUsuarios := TfrmCadastroUsuarios.Create(nil);
+  try
+    frmCadastroUsuarios.ShowModal;
+
+  finally
+    FreeAndNil(frmCadastroUsuarios);
   end
 end;
 

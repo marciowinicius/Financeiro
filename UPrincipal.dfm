@@ -34,6 +34,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 45
     Width = 73
     Height = 68
+    Cursor = crHandPoint
     Hint = 'Cadastro de Usu'#225'rios'
     CustomHint = blnhn1
     ParentShowHint = False
@@ -208,12 +209,14 @@ object frmPrincipal: TfrmPrincipal
       4F3FDD7EA0FDBBB68BD05AD12E426B45BB08AD15ED9F6A2E4B952FF14CF10000
       000049454E44AE426082}
     ShowHint = True
+    OnClick = imgUsuariosClick
   end
   object imgReceber: TImage
     Left = 112
     Top = 45
     Width = 73
     Height = 68
+    Cursor = crHandPoint
     Hint = 'Cadastro de Contas a Receber'
     CustomHint = blnhn1
     ParentShowHint = False
@@ -595,6 +598,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 45
     Width = 73
     Height = 68
+    Cursor = crHandPoint
     Hint = 'Cadastro de Contas a Pagar'
     CustomHint = blnhn1
     ParentShowHint = False
@@ -859,6 +863,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 45
     Width = 73
     Height = 68
+    Cursor = crHandPoint
     Hint = 'Lan'#231'amentos no caixa'
     CustomHint = blnhn1
     ParentShowHint = False
@@ -1145,6 +1150,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 45
     Width = 73
     Height = 68
+    Cursor = crHandPoint
     Hint = 'Consultar contas a receber'
     CustomHint = blnhn1
     ParentShowHint = False
@@ -1420,6 +1426,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 45
     Width = 73
     Height = 68
+    Cursor = crHandPoint
     Hint = 'Consultar contas a pagar'
     CustomHint = blnhn1
     ParentShowHint = False
@@ -1616,6 +1623,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 181
     Width = 73
     Height = 68
+    Cursor = crHandPoint
     Hint = 'Relat'#243'rio de contas a pagar'
     CustomHint = blnhn1
     ParentShowHint = False
@@ -1815,6 +1823,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 317
     Width = 73
     Height = 68
+    Cursor = crHandPoint
     Hint = 'Configura'#231#245'es'
     CustomHint = blnhn1
     ParentShowHint = False
@@ -2126,6 +2135,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 317
     Width = 73
     Height = 68
+    Cursor = crHandPoint
     Hint = 'Navegador'
     CustomHint = blnhn1
     ParentShowHint = False
@@ -2404,6 +2414,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 181
     Width = 73
     Height = 68
+    Cursor = crHandPoint
     Hint = 'Relat'#243'rio de contas a receber'
     CustomHint = blnhn1
     ParentShowHint = False
@@ -2591,6 +2602,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 181
     Width = 73
     Height = 68
+    Cursor = crHandPoint
     Hint = 'Relat'#243'rio de lan'#231'amentos no caixa'
     CustomHint = blnhn1
     ParentShowHint = False
